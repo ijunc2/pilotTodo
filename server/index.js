@@ -9,7 +9,7 @@ import path from 'path';
 import fs from 'fs';
 import connectMongoose from './mgStore';
 
-const PORT = 3010;
+const PORT = 3012;
 const app = express();
 
 app.use(bodyParser.json());
@@ -24,14 +24,6 @@ console.log('#[Uploading the router for the API.]');
 console.log('Connecting the MongDB...')
 connectMongoose();
 console.log('Being connected successfully.')
-
-app.all('/*', function(req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE'); // If needed
-  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type'); // If needed
-  res.setHeader('Access-Control-Allow-Credentials', true); // If needed
-
-});
 
 // page router
 let indexPage = "";

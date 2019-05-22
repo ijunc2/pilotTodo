@@ -1,6 +1,6 @@
 export default {
-  user: {},
-  news: [],
-  asks: [],
-  jobs: []
+  user: {
+    name: 'before signing'
+  },
+  todo: []
 }

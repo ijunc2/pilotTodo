@@ -1,26 +1,27 @@
 <template>
-    <div>
-        <p v-for="ask in fetchedAsks">
-            <a :href="ask.url">{{ask.title}}</a>
-            <small> {{ask.time_ago}} by
-                <router-link :to="'/user/' + ask.User">{{ask.User}}</router-link>
-            </small>
-        </p>
+    <div style="height: 100%;
+                padding: 0px;
+                background-color: #F6F6F6;
+                margin: 0; overflow-x:
+                hidden;overflow-x: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;">
+        <LoginBox></LoginBox>
     </div>
 </template>
 
 <script>
-    import {mapGetters} from 'vuex';
-    export default {
+    import LoginBox from '../components/LoginBox';
 
-        computed: {
-          ...mapGetters([
-            'fetchedAsks'
-          ])
+    export default {
+        components: {
+          LoginBox
         },
-        created() {
-          this.$store.dispatch('FETCH_ASKS');
-        }
+
+      created() {
+
+      }
     }
 </script>
 

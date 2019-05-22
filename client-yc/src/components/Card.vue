@@ -1,6 +1,6 @@
 <template>
-  <div class="pipeline">
-
+  <div class="card">
+    asdfasdfasdfasdf
   </div>
 </template>
 
@@ -11,10 +11,11 @@
 </script>
 
 <style scoped>
-  .pipeline {
+  .card {
     border: 1px solid black;
-    background-color: #EAEAEA;
-    height: 80%;
-    width: 400px;
+    background-color: white;
+    height: 100px;
+    padding: 30px;
+    margin: 10px;
   }
 </style>

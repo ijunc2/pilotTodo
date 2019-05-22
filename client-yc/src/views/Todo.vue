@@ -1,28 +1,33 @@
 <template>
-    <div>
-<!--        <div v-for="job in fetchedJobs ">{{job.title}}</div>-->
-        <p v-for="job in fetchedJobs">
-            <a :href="job.url">{{job.title}}</a>
-            <small> {{job.time_ago}}
-            </small>
-        </p>
+    <div class="todo">
+        <Pipeline></Pipeline>
     </div>
 </template>
 
 <script>
-    import {mapGetters} from 'vuex';
+    import Pipeline from '../components/Pipeline';
+
     export default {
-        computed: {
-          ...mapGetters([
-            'fetchedJobs'
-          ])
+        components: {
+          Pipeline
         },
         created() {
-          this.$store.dispatch('FETCH_JOBS')
+            this.$store.dispatch('');
         }
     }
 </script>
 
 <style>
-
+    .todo {
+        height: 100%;
+        padding: 0px;
+        background-color: #F6F6F6;
+        overflow-x: hidden;
+        overflow-x: hidden;
+        display: flex;
+        align-items: center;
+        overflow-x: hidden;
+        justify-content: center;
+        margin-top: 10px;
+    }
 </style>
