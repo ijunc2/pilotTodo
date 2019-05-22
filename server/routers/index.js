@@ -1,6 +1,7 @@
-import testRouter from './testRouter'
-
+import userRouter from './UserRouter';
+import todoRouter from './TodoRouter';
+import commentRouter from './CommentRouter';
 export {
-    testRouter
+    userRouter, todoRouter, commentRouter
 };
 

@@ -1,8 +1,10 @@
 import express from 'express';
-import * as apis from './routers';
+import {commentRouter, userRouter, todoRouter} from './routers';
 
-const router = express.Router();
+const router = express();
 
-router.use('/test', apis.testRouter);
+router.use('/', userRouter);
+router.use('/', todoRouter);
+router.use('/', commentRouter);
 
 export default router;
